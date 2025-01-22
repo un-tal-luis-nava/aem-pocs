@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/aem-pocs" mode="merge"/>
+    <filter root="/content/aem-pocs" mode="merge"/>
+    <filter root="/content/dam/aem-pocs" mode="merge">
+        <exclude pattern="/content/dam/aem-pocs(/.*)?"/>
+        <include pattern="/content/dam/aem-pocs/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/aem-pocs/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/aem-pocs" mode="merge"/>
+</workspaceFilter>
