@@ -1,0 +1,8 @@
+{
+    "css-color": "red",
+    "inner-html": " ",
+    "browser-title-prefix": "Local Instance",
+    "always-include-color-css": true,
+    "excluded-wcm-modes": [],
+    "allowed-extensions": []
+}
