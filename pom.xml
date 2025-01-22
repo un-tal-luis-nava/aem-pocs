@@ -48,6 +48,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <componentGroupName>AEM POCs</componentGroupName>
+        <com.adobe.acs.version>6.10.0</com.adobe.acs.version>
     </properties>
     <build>
         <plugins>
@@ -626,6 +627,12 @@ Bundle-DocURL:
                 <artifactId>org.apache.sling.servlets.annotations</artifactId>
                 <version>1.2.4</version>
                 <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.acs</groupId>
+                <artifactId>acs-aem-commons-all</artifactId>
+                <version>${com.adobe.acs.version}</version>
+                <type>zip</type>
             </dependency>
             <!-- Logging Dependencies -->
             <dependency>
