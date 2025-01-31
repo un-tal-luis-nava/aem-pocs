@@ -49,6 +49,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <componentGroupName>AEM POCs</componentGroupName>
         <com.adobe.acs.version>6.10.0</com.adobe.acs.version>
+        <twelvemonkeys.version>3.12.0</twelvemonkeys.version>
     </properties>
     <build>
         <plugins>
@@ -179,6 +180,8 @@ Bundle-Category: ${componentGroupName}
 Bundle-DocURL:
 -plugin org.apache.sling.caconfig.bndplugin.ConfigurationClassScannerPlugin
 -plugin org.apache.sling.bnd.models.ModelsScannerPlugin
+
+-includeresource: common-io-${twelvemonkeys.version}.jar;imageio-psd-${twelvemonkeys.version}.jar;common-image-${twelvemonkeys.version}.jar;common-lang-${twelvemonkeys.version}.jar;imageio-metadata-${twelvemonkeys.version}.jar;imageio-core-${twelvemonkeys.version}.jar;imageio-webp-${twelvemonkeys.version}.jar;lib:=true
                                 ]]>
                                 </bnd>
                             </configuration>
@@ -686,6 +689,42 @@ Bundle-DocURL:
                 <artifactId>jcr</artifactId>
                 <version>2.0</version>
                 <scope>provided</scope>
+            </dependency>
+            <!-- Other dependencies -->
+            <dependency>
+                <groupId>com.twelvemonkeys.imageio</groupId>
+                <artifactId>imageio-core</artifactId>
+                <version>${twelvemonkeys.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.twelvemonkeys.common</groupId>
+                <artifactId>common-io</artifactId>
+                <version>${twelvemonkeys.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.twelvemonkeys.common</groupId>
+                <artifactId>common-image</artifactId>
+                <version>${twelvemonkeys.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.twelvemonkeys.common</groupId>
+                <artifactId>common-lang</artifactId>
+                <version>${twelvemonkeys.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.twelvemonkeys.imageio</groupId>
+                <artifactId>imageio-metadata</artifactId>
+                <version>${twelvemonkeys.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.twelvemonkeys.imageio</groupId>
+                <artifactId>imageio-psd</artifactId>
+                <version>${twelvemonkeys.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.twelvemonkeys.imageio</groupId>
+                <artifactId>imageio-webp</artifactId>
+                <version>${twelvemonkeys.version}</version>
             </dependency>
             <!-- Taglibs -->
             <dependency>
