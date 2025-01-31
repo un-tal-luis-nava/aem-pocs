@@ -1,6 +1,6 @@
 <%@page session="false"
         import="com.day.cq.i18n.I18n,
-    			org.apache.commons.lang.StringUtils,
+    	        org.apache.commons.lang.StringUtils,
                 org.apache.sling.api.resource.Resource,
                 org.apache.sling.tenant.Tenant,
                 javax.jcr.security.AccessControlManager,
@@ -19,13 +19,10 @@
                 com.adobe.cq.dam.dm.delivery.api.ImageDelivery,
                 com.adobe.cq.dam.dm.delivery.api.TenantSettings,
                 java.awt.Dimension,
-                com.adobe.granite.ui.components.Config"%>
-<%@ page import="java.util.ArrayList" %>
-<%
+                com.adobe.granite.ui.components.Config"%><%
+%><%@ page import="java.util.ArrayList" %><%
 %><%@taglib prefix="cq" uri="http://www.day.com/taglibs/cq/1.0" %><%
-%><cq:defineObjects />
-<cq:includeClientLib categories="dam.gui.renditions" />
-<%
+%><cq:defineObjects /><cq:includeClientLib categories="dam.gui.renditions" /><%
     I18n i18n = new I18n(request);
     int maxPixHeight = 0;
     int maxPixWidth = 0;
@@ -177,9 +174,14 @@
         </div>
      <% } else if (isSmartCrop) { %>
         <cq:include script="/libs/dam/gui/components/s7dam/smartcroprenditions/smartcroprenditionspreview.jsp"/>
-     <% } else if (UIHelper.canRenderOnWeb(renditionMimeType)) { %>
+     <% } else if (UIHelper.canRenderOnWeb(renditionMimeType) || canRenderOnWeb(renditionMimeType)) { %>
             <img class="dam-renditions-image" src="<%= xssAPI.getValidHref(contentPath) %>"  alt="<%=xssAPI.encodeForHTMLAttr(UIHelper.getAltText(currentResource))%>"/>
      <% } else  { %>
             <p style="text-align: center"><%= i18n.get("Preview is not supported for the selected item.")%></p>
      <% } %>
-</div>
+</div><%!
+    // Allows preview of WEBP images through their original renditions.
+    private boolean canRenderOnWeb(String renditionMimeType){
+        return "image/webp".equals(renditionMimeType);
+    }
+%>
