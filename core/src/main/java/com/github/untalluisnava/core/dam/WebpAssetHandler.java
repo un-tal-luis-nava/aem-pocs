@@ -1,5 +1,7 @@
 package com.github.untalluisnava.core.dam;
 
+import static com.github.untalluisnava.core.util.Constants.VENDOR;
+
 import com.day.cq.dam.api.Asset;
 import com.day.cq.dam.api.DamConstants;
 import com.day.cq.dam.api.Rendition;
@@ -17,6 +19,8 @@ import javax.imageio.ImageReader;
 import javax.imageio.stream.ImageInputStream;
 import org.apache.commons.imaging.ImageReadException;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.propertytypes.ServiceDescription;
+import org.osgi.service.component.propertytypes.ServiceVendor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,6 +28,8 @@ import org.slf4j.LoggerFactory;
  * @author lnava
  */
 @Component(service = AssetHandler.class)
+@ServiceVendor(VENDOR)
+@ServiceDescription("")
 public class WebpAssetHandler extends StandardImageHandler {
 
   private final Logger logger = LoggerFactory.getLogger(WebpAssetHandler.class);
