@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%magenta(TEST)] [%highlight(%-5level)] [%-60.60green(%logger{10}:%line)] - %yellow(%msg%n)</pattern>
+        </encoder>
+    </appender>
+    
+    <logger name="io.wcm.testing" level="WARN" />
+    <logger name="org.apache" level="WARN" />
+    <logger name="org.reflections" level="WARN" />
+
+    <root level="TRACE">
+        <appender-ref ref="Console" />
+    </root>
+
+</configuration>
