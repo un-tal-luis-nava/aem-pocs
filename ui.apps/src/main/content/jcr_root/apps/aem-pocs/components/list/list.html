@@ -1,0 +1,8 @@
+<!--/*
+Conditionally rendering according to the value set @ "Build List Using" (listFrom).
+*/-->
+<sly data-sly-test.isSimilarity="${properties.listFrom == 'similarity'}"/>
+<!--/* Self case */-->
+<sly data-sly-test="${isSimilarity}" data-sly-include="similarity.html"></sly>
+<!--/* Default: rendering the supertype core/wcm/components/list/v4/list */-->
+<sly data-sly-test="${!isSimilarity}" data-sly-resource="${resource @ resourceType='core/wcm/components/list/v4/list'}"></sly>

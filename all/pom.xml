@@ -66,6 +66,11 @@
                             <target>/apps/aem-pocs-packages/application/install</target>
                         </embedded>
                         <embedded>
+                            <groupId>org.jsoup</groupId>
+                            <artifactId>jsoup</artifactId>
+                            <target>/apps/aem-pocs-packages/application/install</target>
+                        </embedded>
+                        <embedded>
                             <groupId>com.github.un-tal-luis-nava</groupId>
                             <artifactId>aem-pocs.ui.content</artifactId>
                             <type>zip</type>
@@ -95,39 +100,10 @@
                             <target>/apps/aem-pocs-vendor-packages/application/install</target>
                         </embedded>
                         <embedded>
-                            <groupId>com.adobe.cq</groupId>
-                            <artifactId>core.wcm.components.extensions.amp.content</artifactId>
-                            <type>zip</type>
-                            <target>/apps/aem-pocs-vendor-packages/application/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>com.adobe.cq</groupId>
-                            <artifactId>core.wcm.components.extensions.amp</artifactId>
-                            <target>/apps/aem-pocs-vendor-packages/application/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>com.adobe.cq</groupId>
-                            <artifactId>core.wcm.components.examples.ui.config</artifactId>
-                            <type>zip</type>
-                            <target>/apps/aem-pocs-vendor-packages/application/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>com.adobe.cq</groupId>
-                            <artifactId>core.wcm.components.examples.ui.apps</artifactId>
-                            <type>zip</type>
-                            <target>/apps/aem-pocs-vendor-packages/application/install</target>
-                        </embedded>
-                        <embedded>
                             <groupId>com.adobe.acs</groupId>
                             <artifactId>acs-aem-commons-all</artifactId>
                             <type>zip</type>
                             <target>/apps/aem-pocs-vendor-packages/application/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>com.adobe.cq</groupId>
-                            <artifactId>core.wcm.components.examples.ui.content</artifactId>
-                            <type>zip</type>
-                            <target>/apps/aem-pocs-vendor-packages/content/install</target>
                         </embedded>
                     </embeddeds>
                 </configuration>
@@ -245,30 +221,6 @@
         <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.config</artifactId>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.cq</groupId>
-            <artifactId>core.wcm.components.extensions.amp.content</artifactId>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.cq</groupId>
-            <artifactId>core.wcm.components.extensions.amp</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.cq</groupId>
-            <artifactId>core.wcm.components.examples.ui.config</artifactId>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.cq</groupId>
-            <artifactId>core.wcm.components.examples.ui.apps</artifactId>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.cq</groupId>
-            <artifactId>core.wcm.components.examples.ui.content</artifactId>
             <type>zip</type>
         </dependency>
         <dependency>
